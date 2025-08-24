@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sillvex Jewellery Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #edded5;
+      font-family: Arial, sans-serif;
+      padding: 0px;
+      margin: 0;
+      background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+    }
+
+    /* h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: rgb(31, 20, 1);
+    } */
+
+    .box {
+      width: 100%;
+      overflow: hidden; 
+    }
+
+    .item-box {
+      width: 18%;
+      float: left;
+      margin: 1%;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 3px 3px 12px rgba(0,0,0,0.2);
+      text-align: center;
+      padding: 15px;
+      box-sizing: border-box;
+      transition: transform 0.3s ease;
+    }
+
+    .item-box:hover {
+      transform: scale(1.05);
+    }
+
+    .item-img {
+      width: 100%;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .item-name {
+      font-weight: bold;
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .item-price {
+      color: #b12704;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .buy-btn {
+      background-color: #6f482f;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .buy-btn:hover {
+      background-color: rgb(237, 96, 14);
+    }
+
+
+
+    /* form css */
+    /* Form popup background */
+/* Popup Background */
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 999;
+}
+
+/* Show popup on target */
+#buyForm:target {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Popup Box */
+.form-content {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  text-decoration: none;
+  font-size: 28px;
+  color: #555;
+  font-weight: bold;
+}
+
+/* Heading */
+.form-content h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #6f482f;
+}
+
+/* Input Fields */
+.form-content input[type="text"],
+.form-content input[type="tel"],
+.form-content textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Submit Button */
+.form-content input[type="submit"] {
+  width: 100%;
+  background-color: #6f482f;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-content input[type="submit"]:hover {
+  background-color: hotpink;
+}
+
+
+
+.navbar {
+    background-color: rgba(31, 20, 1, 0.8);
+    color: white;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  /* Container below navbar - transparent background now */
+  .explore-sort-filter {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 30px;
+   color: rgb(31, 20, 1);
+  }
+
+  /* Exploring Silver text */
+  .exploring-silver {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    
+  }
+
+  /* Sort By label + select */
+  .sort-container {
+  display: flex;
+  flex-direction: row; /* changed from column to row */
+  align-items: center; /* vertically center label and select */
+  gap: 8px; /* small gap between label and select */
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.sort-container label {
+  margin-bottom: 0; /* remove bottom margin */
+  color: rgba(31, 20, 1, 0.8);
+  font-weight: bold;
+}
+
+  
+  .sort-container select {
+    padding: 6px 10px;
+    font-weight: bold;
+    font-size: 13px;
+    border: 1px solid rgba(31, 20, 1, 0.8);
+    background: rgba(31, 20, 1, 0.8);
+    color: #fff;
+    cursor: pointer;
+    min-width: 140px;
+  }
+
+  /* Filter button */
+  .filter-btn {
+    background: rgba(31, 20, 1, 0.8);
+    color: #fff;
+    padding: 10px 18px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+
+  /* Filters text line */
+  .filters {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #000;
+  }
+  .filters span {
+    cursor: pointer;
+    user-select: none;
+  }
+  .filters span::before {
+    content: "× ";
+    font-weight: bold;
+  }
+
+
+
+
+  /* footerpart */
+  .site-footer {
+      background-color: rgba(31, 20, 1, 0.8);
+      color: #fff;
+      padding: 50px 20px 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0px auto;
+      gap: 30px;
+    }
+
+    .footer-column {
+      flex: 1 1 220px;
+    }
+
+    .footer-column h3,
+    .footer-column h4 {
+      margin-bottom: 15px;
+      color: #f2c94c;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .footer-column ul li a:hover {
+      color: #ee7d14;
+    }
+
+    .footer-column form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-column input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .footer-column button {
+      padding: 10px;
+      background-color: #f2c94c;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer-column button:hover {
+      background-color: #ee7d14;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+       margin-left: 50px;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    
+  </style>
+</head>
+<body >
+  <div id="navbar"></div>
+  <script src="script.js"></script>
+ 
+<!-- Sort By Section -->
+<div class="explore-sort-filter">
+  <div class="exploring-silver">Exploring Silver</div>
+
+  <div class="sort-container">
+    <label for="sort-select">SORT BY</label>
+    <select id="sort-select" name="sort">
+      <option value="popular" selected>Popular</option>
+      <option value="price-low">Price: Low to High</option>
+      <option value="price-high">Price: High to Low</option>
+      <option value="newest">Newest</option>
+    </select>
+  </div>
+
+  <button class="filter-btn">FILTER</button>
+
+  <div class="filters">
+    <span>Silver</span>
+    <span>Gold</span>
+    <span>ALL</span>
+  </div>
+</div>
+
+
+  <!-- <h1>Sillvex Jewellery Collection</h1> -->
+  
+
+  <div class="box">
+    
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('earing1.jpeg');"></div>
+      <div class="item-name">Silver Earing</div>
+      <div class="item-price">₹1,299</div>
+      <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('earing2.jpeg');"></div>
+      <div class="item-name">Silver Earing</div>
+      <div class="item-price">₹899</div>
+      <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('earing3.jpeg');"></div>
+      <div class="item-name">Silver Earing</div>
+      <div class="item-price">₹2,199</div>
+      <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('earing4.jpeg');"></div>
+      <div class="item-name">Silver Earing</div>
+      <div class="item-price">₹749</div>
+      <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('earing5.jpeg');"></div>
+      <div class="item-name">Silver Earing</div>
+      <div class="item-price">₹1,499</div>
+      <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+    
+
+  </div>
+
+
+  <div class="box">
+    
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('pendant4.jpeg');"></div>
+      <div class="item-name">Silver Pendant</div>
+      <div class="item-price">₹1,299</div>
+      <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('pendant1.jpeg');"></div>
+      <div class="item-name">Silver Pendant</div>
+      <div class="item-price">₹899</div>
+     <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('pendant3.jpeg');"></div>
+      <div class="item-name">Silver Pendant</div>
+      <div class="item-price">₹2,199</div>
+      <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('pendant5.jpeg');"></div>
+      <div class="item-name">Silver Pendant</div>
+      <div class="item-price">₹749</div>
+   <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('pendant2.jpeg');"></div>
+      <div class="item-name">Silver Pendant</div>
+      <div class="item-price">₹1,499</div>
+     <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+   
+
+  </div>
+
+
+
+  <div class="box">
+    
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('ring6.jpeg');"></div>
+      <div class="item-name">Silver Ring</div>
+      <div class="item-price">₹1,299</div>
+      <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('ring2.jpeg');"></div>
+      <div class="item-name">Silver Ring</div>
+      <div class="item-price">₹899</div>
+     <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('ring3.jpeg');"></div>
+      <div class="item-name">Silver Ring</div>
+      <div class="item-price">₹2,199</div>
+     <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('ring4.jpeg');"></div>
+      <div class="item-name">Silver Ring</div>
+      <div class="item-price">₹749</div>
+      <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+    <div class="item-box">
+      <div class="item-img" style="background-image: url('ring5.jpeg');"></div>
+      <div class="item-name">Silver Ring</div>
+      <div class="item-price">₹1,499</div>
+      <a href="#buyForm" class="buy-btn">Buy Now</a>
+
+    </div>
+
+   
+
+    <!-- form css -->
+<!-- Hidden Form Popup -->
+<!-- Elegant Form Popup -->
+<div id="buyForm" class="popup-form">
+  <div class="form-content">
+    <a href="#" class="close-btn">&times;</a>
+    <h2>Place Your Order</h2>
+    <form action="#" method="post">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <textarea id="address" placeholder="Your Address" required></textarea>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="submit" value="Confirm Order">
+    </form>
+  </div>
+</div>
+
+
+  </div>
+
+    <br><br><br><br><br><br>
+    
+
+
+
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Sillvex</h3>
+      <p>Pure. Precious. Personal.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">Rings</a></li>
+        <li><a href="#">Earrings</a></li>
+        <li><a href="#">Necklaces</a></li>
+        <li><a href="#">Bracelets</a></li>
+        <li><a href="#">Anklets</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Stay Connected</h4>
+      <form>
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/sillvex"><img src="fb.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/sillvex925/"><img src="insta.png" alt="Instagram"></a>
+        <a href="https://wa.me/+918960746723"><img src="whatsapp.png" alt="WhatsApp"></a>
+        <a href="https://www.amazon.in/stores/Sillvex/page/327C2129-FE71-4857-9DE1-7E500E30EE6C?is_byline_deeplink=true"><img src="amazon1.png" alt="Amazon"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Sillvex. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>

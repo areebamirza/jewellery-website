@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign-In Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: rgb(242, 210, 223);
+      font-family: Arial, sans-serif;
+      background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+    }
+
+    .box {
+      width: 300px;
+      height: 250px;
+      margin: 200px 0 0 200px; /* top right bottom left */
+      padding: 30px;
+      background-color: rgb(242, 210, 223);
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 7px;
+      margin-bottom: 15px;
+      border: 1px solid rgb(242, 210, 223);
+      border-radius: 10px;
+    }
+
+    button {
+      width: 105%;
+      padding: 10px;
+      background-color:rgb(79, 35, 53);
+      color: rgb(242, 210, 223);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: rgb(218, 25, 102);
+    }
+
+    .bottom-text {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .bottom-text a {
+      color: rgb(123, 44, 44);
+    }
+
+
+
+    /* footerpart */
+
+
+
+    .site-footer {
+      background-color: rgba(31, 20, 1, 0.8);
+      color: #fff;
+      padding: 50px 20px 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0px auto;
+      gap: 30px;
+    }
+
+    .footer-column {
+      flex: 1 1 220px;
+    }
+
+    .footer-column h3,
+    .footer-column h4 {
+      margin-bottom: 15px;
+      color: #f2c94c;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .footer-column ul li a:hover {
+      color: #ee7d14;
+    }
+
+    .footer-column form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-column input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .footer-column button {
+      padding: 10px;
+      background-color: #f2c94c;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer-column button:hover {
+      background-color: #ee7d14;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+       margin-left: 50px;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+
+
+  </style>
+</head>
+<body background="image5.png" style="color: rgb(123, 44, 44);">
+  <div id="navbar"></div>
+  <script src="script.js"></script>
+
+  <div class="box">
+    <h2>Sign In</h2>
+    <form action="thankyou.html" method="get">
+      <input type="email" required placeholder="Email">
+      <input type="password" required placeholder="Password">
+      <button type="submit">Login</button>
+      <div class="bottom-text">
+        Don't have an account? <a href="#">Sign Up</a>
+
+
+         <!-- <a href="index.html" style="color: rgb(123, 44, 44);">← Back to Home</a> -->
+      </div>
+    </form>
+  </div>
+
+  <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    
+
+
+
+
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Sillvex</h3>
+      <p>Pure. Precious. Personal.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">Rings</a></li>
+        <li><a href="#">Earrings</a></li>
+        <li><a href="#">Necklaces</a></li>
+        <li><a href="#">Bracelets</a></li>
+        <li><a href="#">Anklets</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Stay Connected</h4>
+      <form>
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/sillvex"><img src="fb.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/sillvex925/"><img src="insta.png" alt="Instagram"></a>
+        <a href="https://wa.me/+918960746723"><img src="whatsapp.png" alt="WhatsApp"></a>
+        <a href="https://www.amazon.in/stores/Sillvex/page/327C2129-FE71-4857-9DE1-7E500E30EE6C?is_byline_deeplink=true"><img src="amazon1.png" alt="Amazon"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Sillvex. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>

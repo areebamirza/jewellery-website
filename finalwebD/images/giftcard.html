@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gift Card - Sillvex</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url("giftcard2.jpg") no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .gift-card-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            width: 350px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .gift-card-box h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .gift-card-box p {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .gift-card-box form input,
+        .gift-card-box form select,
+        .gift-card-box form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .gift-card-box form input[type="submit"] {
+            background-color: #66a6ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .gift-card-box form input[type="submit"]:hover {
+            background-color: #558de8;
+        }
+
+        /* .features {
+            text-align: center;
+            margin-top: 40px;
+            color: #fff;
+            background-color: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 15px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        } */
+
+
+
+        /* footerpart */
+
+
+        .site-footer {
+      background-color: rgba(31, 20, 1, 0.8);
+      color: #fff;
+      padding: 50px 20px 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0px auto;
+      gap: 30px;
+    }
+
+    .footer-column {
+      flex: 1 1 220px;
+    }
+
+    .footer-column h3,
+    .footer-column h4 {
+      margin-bottom: 15px;
+      color: #f2c94c;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .footer-column ul li a:hover {
+      color: #ee7d14;
+    }
+
+    .footer-column form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-column input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .footer-column button {
+      padding: 10px;
+      background-color: #f2c94c;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer-column button:hover {
+      background-color: #ee7d14;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+       margin-left: 50px;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+
+    </style>
+</head>
+<body>
+    
+<div id="navbar"></div>
+<script src="script.js"></script>
+
+    <div class="gift-card-box">
+        <h1>🎁 Sillvex Gift Card</h1>
+        <p>Surprise your loved ones with the sparkle of silver</p>
+
+        <form>
+            <input type="text" name="recipient" placeholder="Recipient's Name" required>
+            <input type="email" name="email" placeholder="Recipient's Email" required>
+            <input type="text" name="sender" placeholder="Your Name" required>
+            <textarea name="message" rows="4" placeholder="Write your warm wishes here..."></textarea>
+            <select name="amount">
+                <option selected disabled>Select Amount</option>
+                <option>₹500</option>
+                <option>₹1000</option>
+                <option>₹1500</option>
+                <option>₹2000</option>
+            </select>
+            <input type="submit" value="Send Gift Card">
+        </form>
+    </div>
+
+    <!-- <div class="features">
+        <h3>🌟 Why Sillvex Gift Cards?</h3>
+        <p>
+            ✓ Perfect for birthdays, anniversaries & surprises<br>
+            ✓ Choose any silver jewellery from our collection<br>
+            ✓ Easy to send & delightful to receive!
+        </p>
+    </div> -->
+
+
+
+    <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Sillvex</h3>
+      <p>Pure. Precious. Personal.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">Rings</a></li>
+        <li><a href="#">Earrings</a></li>
+        <li><a href="#">Necklaces</a></li>
+        <li><a href="#">Bracelets</a></li>
+        <li><a href="#">Anklets</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Stay Connected</h4>
+      <form>
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/sillvex"><img src="fb.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/sillvex925/"><img src="insta.png" alt="Instagram"></a>
+        <a href="https://wa.me/+918960746723"><img src="whatsapp.png" alt="WhatsApp"></a>
+        <a href="https://www.amazon.in/stores/Sillvex/page/327C2129-FE71-4857-9DE1-7E500E30EE6C?is_byline_deeplink=true"><img src="amazon1.png" alt="Amazon"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Sillvex. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>

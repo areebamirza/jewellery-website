@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sillvex Jewellery Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #f5eae1, #f3dde7);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #341a01;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    /* Wrapper */
+    .container {
+      width: 90%;
+      margin: auto;
+    }
+
+    /* Rows with two big boxes */
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      margin-bottom: 30px;
+    }
+
+    .big-box {
+      
+      flex: 1;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 40px;
+      padding: 20px;
+      box-sizing: border-box;
+      position: relative;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Common text styling */
+   
+
+    /* Rows with three small boxes */
+    .small-row {
+      display: flex;
+      gap: 70px;
+      justify-content: center;
+      margin: 50px 0;
+      flex-wrap: wrap;
+    }
+
+    .small-box {
+      width: 385px;
+      height: 210px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 40px;
+      position: relative;
+      overflow: hidden;
+       box-shadow: 0 4px 15px rgb(0,0,0);
+    }
+    .small-box:hover, .big-box:hover {
+  transform: scale(1.05); 
+  transition: transform 0.4s ease;
+}
+
+
+   /* footerpart */
+   .site-footer {
+      background-color: rgba(31, 20, 1, 0.8);
+      color: #fff;
+      padding: 50px 20px 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0px auto;
+      gap: 30px;
+    }
+
+    .footer-column {
+      flex: 1 1 220px;
+    }
+
+    .footer-column h3,
+    .footer-column h4 {
+      margin-bottom: 15px;
+      color: #f2c94c;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .footer-column ul li a:hover {
+      color: #ee7d14;
+    }
+
+    .footer-column form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-column input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .footer-column button {
+      padding: 10px;
+      background-color: #f2c94c;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer-column button:hover {
+      background-color: #ee7d14;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+       margin-left: 50px;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="navbar"></div>
+  <script src="script.js"></script>
+
+  <h1>Sillvex Charm Collection</h1>
+  <div class="container">
+
+    <!-- First two rows with big boxes -->
+    <div class="row">
+      <a href="Collection Banner.jpg" target="_blank" 
+         class="big-box" 
+         style="background-image: url('Collection Banner.jpg');">
+        <!-- <div class="box-text">Collection Banner</div> -->
+      </a>
+
+      <a href="Shaadi Diaries.jpg" target="_blank" 
+         class="big-box" 
+         style="background-image: url('Shaadi Diaries.jpg');">
+        <!-- <div class="box-text">Shaadi Diaries</div> -->
+      </a>
+    </div>
+
+    <!-- Small boxes below -->
+    <div class="small-row">
+      <a href="(B)ring _in the Love_Colection_Banner.jpg" target="_blank">
+        <div class="small-box" style="background-image: url('(B)ring _in the Love_Colection_Banner.jpg');">
+          
+        </div>
+      </a>
+
+      <a href="HP_1.jpg" target="_blank">
+        <div class="small-box" style="background-image: url('HP_1.jpg');">
+          
+        </div>
+      </a>
+
+      <a href="Mehfil.jpg" target="_blank">
+        <div class="small-box" style="background-image: url('Mehfil.jpg');">
+          
+        </div>
+      </a>
+    </div>
+
+    <!-- Repeat for other rows -->
+   <div class="small-row">
+      <a href="Rani  Udaymati.jpg" target="_blank">
+        <div class="small-box" style="background-image: url('Rani  Udaymati.jpg');">
+          
+        </div>
+      </a>
+
+      <a href="Forged _by Fire.jpg" target="_blank">
+        <div class="small-box" style="background-image: url('Forged _by Fire.jpg');">
+          
+        </div>
+      </a>
+
+      <a href="The Greatest _Love Story.jpg" target="_blank">
+        <div class="small-box" style="background-image: url('The Greatest _Love Story.jpg');">
+          
+        </div>
+      </a>
+    </div>
+    <div class="small-row">
+      <a href="Everyday _Queen.jpg" target="_blank">
+        <div class="small-box" style="background-image: url('Everyday _Queen.jpg');">
+          
+        </div>
+      </a>
+
+      <a href="Chitrakalay_Kolkata.jpg" target="_blank">
+        <div class="small-box" style="background-image: url('Chitrakalay_Kolkata.jpg');">
+          
+        </div>
+      </a>
+
+      <a href="To the _Wanderlust in You.jpg" target="_blank">
+        <div class="small-box" style="background-image: url('To the _Wanderlust in You.jpg');">
+          
+        </div>
+      </a>
+    </div>
+
+    <div class="small-row">
+      <a href="The Legacy of Rani Lokmahadevi.jpg" target="_blank">
+        <div class="small-box" style="background-image: url('The Legacy of Rani Lokmahadevi.jpg');">
+          
+        </div>
+      </a>
+
+      <a href="Shaadi Squad.jpg" target="_blank">
+        <div class="small-box" style="background-image: url('Shaadi Squad.jpg');">
+         
+           
+        </div>
+      </a>
+
+      <a href="Unfurl.jpg" target="_blank">
+        <div class="small-box" style="background-image: url('Unfurl.jpg');">
+          
+          </div>
+        </div>
+      </a>
+    </div>
+    
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Sillvex</h3>
+      <p>Pure. Precious. Personal.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">Rings</a></li>
+        <li><a href="#">Earrings</a></li>
+        <li><a href="#">Necklaces</a></li>
+        <li><a href="#">Bracelets</a></li>
+        <li><a href="#">Anklets</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Stay Connected</h4>
+      <form>
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/sillvex"><img src="fb.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/sillvex925/"><img src="insta.png" alt="Instagram"></a>
+        <a href="https://wa.me/+918960746723"><img src="whatsapp.png" alt="WhatsApp"></a>
+        <a href="https://www.amazon.in/stores/Sillvex/page/327C2129-FE71-4857-9DE1-7E500E30EE6C?is_byline_deeplink=true"><img src="amazon1.png" alt="Amazon"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Sillvex. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

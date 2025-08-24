@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sillvex Jewellery Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      /* background: linear-gradient(to right, #eddacc, #f8e6da); */
+      font-family: Arial, sans-serif;
+      padding: 0;
+      margin: 0;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-attachment: fixed;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #341a01;
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 10px 40px;
+      gap: 25px;
+    }
+
+    .item-box {
+      width: 28%;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 15px;
+      margin-bottom: 30px;
+      box-sizing: border-box;
+      transition: transform 0.3s ease;
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .item-box:hover {
+      transform: scale(1.05);
+      border-radius: 50px 0px 50px 0px;
+    }
+
+    .item-img {
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .item-name {
+      font-weight: bold;
+      font-size: 18px;
+      color: #381703;
+      margin-bottom: 5px;
+    }
+
+    .item-price {
+      color: #b12704;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .item-details {
+      font-size: 14px;
+      color: #5a3e1b;
+      text-align: left;
+      margin-bottom: 10px;
+      flex-grow: 1;
+    }
+    .item-details p {
+      margin: 0 0 8px 0;
+      font-weight: 600;
+    }
+    .item-details ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    .item-details li {
+      margin-bottom: 4px;
+    }
+
+    .buy-btn {
+      background-color: #421b03;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      width: 250px;
+      height: 39px;
+      cursor: pointer;
+      font-size: 15px;
+      margin-top: 10px;
+      display: inline-block;
+      align-self: center;
+    }
+
+    .buy-btn:hover {
+      background-color: rgb(176, 89, 12);
+    }
+
+
+
+    .site-footer {
+      background-color: rgba(31, 20, 1, 0.8);
+      color: #fff;
+      padding: 50px 20px 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0px auto;
+      gap: 30px;
+    }
+
+    .footer-column {
+      flex: 1 1 220px;
+    }
+
+    .footer-column h3,
+    .footer-column h4 {
+      margin-bottom: 15px;
+      color: #f2c94c;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .footer-column ul li a:hover {
+      color: #ee7d14;
+    }
+
+    .footer-column form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-column input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .footer-column button {
+      padding: 10px;
+      background-color: #f2c94c;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer-column button:hover {
+      background-color: #ee7d14;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+       margin-left: 50px;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body background="image9.png">
+  <div id="navbar"></div>
+  <script src="script.js"></script>
+
+  <h1>Sillvex Bestseller</h1>
+
+  <div class="box">
+
+    <div class="item-box">
+      <a href="Shop designs from Simon G_ on our website today! https___www.pittsburghdiamonds.com_.jpg">
+        <div class="item-img" style="background-image: url('Shop designs from Simon G_ on our website today! https___www.pittsburghdiamonds.com_.jpg');"></div>
+      </a>
+      <div class="item-name">Silver Set</div>
+      <div class="item-price">₹1,299</div>
+      <div class="item-details">
+        <p>Elegant silver set.</p>
+        <ul>
+          <li>Material: Sterling Silver</li>
+          <li>Weight: 12g</li>
+          <li>Length: 10cm</li>
+        </ul>
+      </div>
+      <button class="buy-btn" onclick="alert('Added to cart!')">Add to Cart</button>
+    </div>
+
+    <div class="item-box">
+      <a href="Crystal Bridal Jewelry, Rose Gold Crystal Bridal Necklace, Rose Gold Wedding Jewelry, DENISE RG - Etsy.jpeg">
+        <div class="item-img" style="background-image: url('Crystal Bridal Jewelry, Rose Gold Crystal Bridal Necklace, Rose Gold Wedding Jewelry, DENISE RG - Etsy.jpeg');"></div>
+      </a>
+      <div class="item-name">Bridal Necklace</div>
+      <div class="item-price">₹16899</div>
+      <div class="item-details">
+        <p>Rose gold bridal necklace with crystals.</p>
+        <ul>
+          <li>Material: Rose Gold Plated</li>
+          <li>Length: 45cm</li>
+          <li>Perfect for weddings</li>
+        </ul>
+      </div>
+      <button class="buy-btn" onclick="alert('Added to cart!')">Add to Cart</button>
+    </div>
+
+    <div class="item-box">
+      <a href="Luxury Brand Titanium Steel Bracelet Vacuum Plating Does Not Fade Designer 18K Gold-Plated Jewelry.jpeg">
+        <div class="item-img" style="background-image: url('Luxury Brand Titanium Steel Bracelet Vacuum Plating Does Not Fade Designer 18K Gold-Plated Jewelry.jpeg');"></div>
+      </a>
+      <div class="item-name">Titanium Steel Bracelet</div>
+      <div class="item-price">₹2,199</div>
+      <div class="item-details">
+        <p>Durable gold-plated titanium bracelet.</p>
+        <ul>
+          <li>Material: Titanium Steel</li>
+          <li>18K Gold Plating</li>
+          <li>Fade resistant</li>
+        </ul>
+      </div>
+      <button class="buy-btn" onclick="alert('Added to cart!')">Add to Cart</button>
+    </div>
+
+    <div class="item-box">
+      <a href="ring6.jpeg">
+        <div class="item-img" style="background-image: url('ring6.jpeg');"></div>
+      </a>
+      <div class="item-name">Silver Ring</div>
+      <div class="item-price">₹749</div>
+      <div class="item-details">
+        <p>Classic silver ring with smooth finish.</p>
+        <ul>
+          <li>Material: Sterling Silver</li>
+          <li>Size: Adjustable</li>
+          <li>Weight: 8g</li>
+        </ul>
+      </div>
+      <button class="buy-btn" onclick="alert('Added to cart!')">Add to Cart</button>
+    </div>
+
+    <div class="item-box">
+      <a href="commu15.jpg">
+        <div class="item-img" style="background-image: url('commu15.jpg');"></div>
+      </a>
+      <div class="item-name">Silver promise,engagement and wedding ring set</div>
+      <div class="item-price">₹17,299</div>
+      <div class="item-details">
+        <p>Elegant silver promise,engagement and wedding ring set.</p>
+        <ul>
+          <li>Material: Sterling Silver</li>
+          <li>Gemstone: Alexandrite </li>
+          <li>Size: 5,6,7</li>
+        </ul>
+      </div>
+      <button class="buy-btn" onclick="alert('Added to cart!')">Add to Cart</button>
+    </div>
+
+    <div class="item-box">
+      <a href="a546da72-1ea9-481d-a5d8-4c1c24934a82.jpeg">
+        <div class="item-img" style="background-image: url('a546da72-1ea9-481d-a5d8-4c1c24934a82.jpeg');"></div>
+      </a>
+      <div class="item-name">Silver Earrings</div>
+      <div class="item-price">₹899</div>
+      <div class="item-details">
+        <p>Handcrafted silver earings.</p>
+        <ul>
+          <li>Material: Sterling Silver</li>
+          <li>Length: 4cm</li>
+          <li>Lightweight</li>
+        </ul>
+      </div>
+      <button class="buy-btn" onclick="alert('Added to cart!')">Add to Cart</button>
+    </div>
+
+    <div class="item-box">
+      <a href="pexels-iamngakaneka-3474504.jpg">
+        <div class="item-img" style="background-image: url('pexels-iamngakaneka-3474504.jpg');"></div>
+      </a>
+      <div class="item-name">Silver Ring</div>
+      <div class="item-price">₹2,199</div>
+      <div class="item-details">
+        <p>Delicate silver  with gemstone.</p>
+        <ul>
+          <li>Material: Sterling Silver</li>
+          <li>Gemstone: Amethyst</li>
+          <li>Size: 6,7 </li>
+        </ul>
+      </div>
+      <button class="buy-btn" onclick="alert('Added to cart!')">Add to Cart</button>
+    </div>
+
+    <div class="item-box">
+      <a href="commu14.jpg">
+        <div class="item-img" style="background-image: url('commu14.jpg');"></div>
+      </a>
+      <div class="item-name">Silver Ring</div>
+      <div class="item-price">₹5749</div>
+      <div class="item-details">
+        <p>Stylish silver ring.</p>
+        <ul>
+          <li>Material: Sterling Silver</li>
+          <li>Size: 5,6,7</li>
+          <li>Charm details included</li>
+        </ul>
+      </div>
+      <button class="buy-btn" onclick="alert('Added to cart!')">Add to Cart</button>
+    </div>
+
+    <div class="item-box">
+      <a href="commu17.jpg">
+        <div class="item-img" style="background-image: url('commu17.jpg');"></div>
+      </a>
+      <div class="item-name">Bridal Ring</div>
+      <div class="item-price">₹9,299</div>
+      <div class="item-details">
+        <p>Classic Bridal Ring.</p>
+        <ul>
+          <li>Material: Sterling Silver</li>
+          <li>Size:5,6,7</li>
+          <li>Polished finish</li>
+        </ul>
+      </div>
+      <button class="buy-btn" onclick="alert('Added to cart!')">Add to Cart</button>
+    </div>
+
+    <div class="item-box">
+      <a href="earing4.jpeg">
+        <div class="item-img" style="background-image: url('earing4.jpeg');"></div>
+      </a>
+      <div class="item-name">Silver Studs</div>
+      <div class="item-price">₹899</div>
+      <div class="item-details">
+        <p>Simple and elegant silver studs.</p>
+        <ul>
+          <li>Material: Sterling Silver</li>
+          <li>Size: 3cm</li>
+          <li>Lightweight</li>
+        </ul>
+      </div>
+      <button class="buy-btn" onclick="alert('Added to cart!')">Add to Cart</button>
+    </div>
+
+    <div class="item-box">
+      <a href="ring7.jpeg">
+        <div class="item-img" style="background-image: url('ring7.jpeg');"></div>
+      </a>
+      <div class="item-name">Silver Wave Ring</div>
+      <div class="item-price">₹2,199</div>
+      <div class="item-details">
+        <p>Modern silver wave ring with engraving.</p>
+        <ul>
+          <li>Material: Sterling Silver</li>
+          <li>Size: 7, 8, 9</li>
+          <li>Weight: 10g</li>
+        </ul>
+      </div>
+      <button class="buy-btn" onclick="alert('Added to cart!')">Add to Cart</button>
+    </div>
+
+    <div class="item-box">
+      <a href="IMG_20250716_014852.jpg">
+        <div class="item-img" style="background-image: url('IMG_20250716_014852.jpg');"></div>
+      </a>
+      <div class="item-name">Silver Necklace</div>
+      <div class="item-price">₹749</div>
+      <div class="item-details">
+        <p>Classic silver necklace, lightweight.</p>
+        <ul>
+          <li>Material: Sterling Silver</li>
+          <li>Diameter: 12cm</li>
+          <li>Comfort fit</li>
+        </ul>
+      </div>
+      <button class="buy-btn" onclick="alert('Added to cart!')">Add to Cart</button>
+    </div>
+
+  </div><br><br><br><br><br>
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Sillvex</h3>
+      <p>Pure. Precious. Personal.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">Rings</a></li>
+        <li><a href="#">Earrings</a></li>
+        <li><a href="#">Necklaces</a></li>
+        <li><a href="#">Bracelets</a></li>
+        <li><a href="#">Anklets</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Stay Connected</h4>
+      <form>
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/sillvex"><img src="fb.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/sillvex925/"><img src="insta.png" alt="Instagram"></a>
+        <a href="https://wa.me/+918960746723"><img src="whatsapp.png" alt="WhatsApp"></a>
+        <a href="https://www.amazon.in/stores/Sillvex/page/327C2129-FE71-4857-9DE1-7E500E30EE6C?is_byline_deeplink=true"><img src="amazon1.png" alt="Amazon"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Sillvex. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

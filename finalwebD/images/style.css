@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+
+
+
+/* NAV CONTAINER FLEX SETUP */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  padding: 0px;
+}
+
+/* NAVBAR BACKGROUND */
+nav {
+  background-color: rgba(31, 20, 1, 0.8);
+  width: 100%;
+}
+
+/* BRAND STYLE (LEFT) */
+.brand {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+ 
+}
+
+/* NAV LINKS (RIGHT) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAV LINKS STYLE */
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  font-family: sans-serif;
+}
+
+.nav-links li a:hover {
+  background-color: #f0f0f0;
+  color: black;
+  transition: 0.3s;
+  border-radius: 40px;
+}

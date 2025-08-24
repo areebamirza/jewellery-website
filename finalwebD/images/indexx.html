@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SILLVEX JEWELLERY</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('image.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-attachment: fixed;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: rgb(26, 17, 6);
+      font-size: 45px;
+    }
+
+    .marquee {
+      color: white;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .gallery {
+      margin-top: 80px;
+      text-align: center;
+    }
+
+    .img-box {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      border-radius: 20px;
+      overflow: hidden;
+      display: inline-block;
+      margin: 20px 10px;
+    }
+
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .img-box:hover img {
+      transform: scale(1.1);
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 20px;
+      transition: left 0.4s ease-in-out;
+    }
+
+    .img-box:hover .overlay {
+      left: 0;
+    }
+
+    .collection-wrapper {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #fdfaf5;
+    }
+
+    .collection-wrapper h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: rgb(26, 17, 6);
+    }
+
+    .collection-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .collection-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+      width: 250px;
+    }
+
+    .collection-card:hover {
+      transform: scale(1.05);
+    }
+
+    .collection-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .collection-card h3 {
+      font-size: 22px;
+      margin: 15px 0 5px;
+      color: #333;
+    }
+
+    .collection-card p {
+      color: #777;
+      margin-bottom: 15px;
+    }
+
+    .category-wrapper {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #fff9f2;
+    }
+
+    .category-wrapper h2 {
+      font-size: 32px;
+      color: rgb(26, 17, 6);
+      margin-bottom: 10px;
+    }
+
+    .sub-heading {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .category-flex {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .category-card {
+      width: 180px;
+      text-align: center;
+    }
+
+    .category-card img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+      transition: transform 0.3s ease;
+    }
+
+    .category-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .category-card h3 {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .community-wrapper {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #fffefc;
+    }
+
+    .community-header h2 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .community-header p {
+      font-size: 16px;
+      color: #777;
+      margin-bottom: 40px;
+    }
+
+    .photo-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .photo-flex img {
+      width: 180px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .photo-flex img:hover {
+      transform: scale(1.03);
+    }
+
+    .upload-button {
+      margin-top: 30px;
+    }
+
+    .btn-upload {
+      background-color: #f2c94c;
+      padding: 12px 24px;
+      color: black;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn-upload:hover {
+      background-color: #e5b300;
+    }
+
+
+    /* footerpart */
+
+    .site-footer {
+      background-color: rgba(31, 20, 1, 0.8);
+      color: #fff;
+      padding: 50px 20px 20px;
+      font-family: 'Poppins', sans-serif;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0px auto;
+      gap: 30px;
+    }
+
+    .footer-column {
+      flex: 1 1 220px;
+    }
+
+    .footer-column h3,
+    .footer-column h4 {
+      margin-bottom: 15px;
+      color: #f2c94c;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: #ddd;
+      text-decoration: none;
+    }
+
+    .footer-column ul li a:hover {
+      color: #ee7d14;
+    }
+
+    .footer-column form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-column input[type="email"] {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .footer-column button {
+      padding: 10px;
+      background-color: #f2c94c;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer-column button:hover {
+      background-color: #ee7d14;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #aaa;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero-background">
+  <div id="navbar"></div>
+  <script src="script.js"></script>
+  <br><br><br><br><br><br><br>
+</div>
+
+<h1 style="margin-top: -90px;">Sillvex Jewellery</h1>
+
+<div class="marquee">
+  <marquee behavior="scroll" direction="left">NEW COLLECTION</marquee>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="gallery">
+  <!-- Add your image boxes here like you've already done -->
+   <a href="Luxury Brand Titanium Steel Bracelet Vacuum Plating Does Not Fade Designer 18K Gold-Plated Jewelry.jpeg" target="_blank">
+      <div class="img-box">
+        <img src="Luxury Brand Titanium Steel Bracelet Vacuum Plating Does Not Fade Designer 18K Gold-Plated Jewelry.jpeg" alt="SILVER BRACELET">
+        <div class="overlay">Silver Bracelet</div>
+      </div>
+    </a>
+
+    <a href="pexels-iamngakaneka-3474504.jpg" target="_blank">
+      <div class="img-box">
+        <img src="pexels-iamngakaneka-3474504.jpg" alt="SILVER RING">
+        <div class="overlay">Silver Ring</div>
+      </div>
+    </a>
+
+    <a href="Crystal Bridal Jewelry, Rose Gold Crystal Bridal Necklace, Rose Gold Wedding Jewelry, DENISE RG - Etsy.jpeg" target="_blank">
+      <div class="img-box">
+        <img src="Crystal Bridal Jewelry, Rose Gold Crystal Bridal Necklace, Rose Gold Wedding Jewelry, DENISE RG - Etsy.jpeg" alt="SILVER SET">
+        <div class="overlay">Silver Necklace</div>
+      </div>
+    </a>
+
+    <a href="a546da72-1ea9-481d-a5d8-4c1c24934a82.jpeg" target="_blank">
+      <div class="img-box">
+        <img src="a546da72-1ea9-481d-a5d8-4c1c24934a82.jpeg" alt="SILVER EARRINGS">
+        <div class="overlay">Silver Earrings</div>
+      </div>
+    </a>
+
+    <a href="Shop designs from Simon G_ on our website today! https___www.pittsburghdiamonds.com_.jpg" target="_blank">
+      <div class="img-box">
+        <img src="Shop designs from Simon G_ on our website today! https___www.pittsburghdiamonds.com_.jpg" alt="PENDANT SET">
+        <div class="overlay">Pendant Set</div>
+      </div>
+    </a>
+
+    <a href="IMG_20250716_014852.jpg" target="_blank">
+      <div class="img-box">
+        <img src="IMG_20250716_014852.jpg" alt="PENDANT">
+        <div class="overlay">Silver Pendant</div><br><br><br>
+      </div>
+    </a>
+</div>
+
+<div class="collection-wrapper">
+  <h2>Sillvex Collections</h2>
+  <div class="collection-flex">
+    <!-- Add .collection-card here like before -->
+     <div class="collection-card">
+      <a href="luna_d.jpg" target="_blank">
+      <img src="luna_d.jpg" alt="Luna Collection"></a>
+      <h3>Luna</h3>
+      <p>For every side of you</p>
+    </div>
+
+    <div class="collection-card">
+      <a href="adaa_d.jpg">
+      <img src="adaa_d.jpg" alt="Adaa Collection"></a>
+      <h3>Adaa</h3>
+      <p>Be Timeless</p>
+    </div>
+
+    <div class="collection-card">
+      <a href="butterfly_d.jpg">
+      <img src="butterfly_d.jpg" alt="Butterfly Collection"></a>
+      <h3>Butterfly</h3>
+      <p>Nature's Grace</p>
+    </div>
+
+    <div class="collection-card">
+      <a href="aaranya_d.jpg">
+      <img src="aaranya_d.jpg" alt="Aaranya Collection"></a>
+      <h3>Aaranya</h3>
+      <p>Wild Beauty</p>
+    </div>
+  </div>
+</div>
+
+<div class="category-wrapper">
+  <h2>Find Your Perfect Match</h2>
+  <p class="sub-heading">Shop by Category</p>
+  <div class="category-flex">
+    <!-- Add .category-card here like before -->
+     <div class="category-card">
+      <a href="ringsec2jpg.jpg">
+      <img src="ringsec2jpg.jpg" alt="Rings"></a>
+      <h3>Rings</h3>
+    </div>
+    <div class="category-card">
+      <a href="earingsec2.jpg">
+      <img src="earingsec2.jpg" alt="Earrings"></a>
+      <h3>Earrings</h3>
+    </div>
+    <div class="category-card">
+      <a href="pendantsec2.jpg">
+      <img src="pendantsec2.jpg" alt="Pendant"></a>
+      <h3>Necklaces</h3>
+    </div>
+    <div class="category-card">
+      <a href="braceletssec2.jpg">
+      <img src="braceletssec2.jpg" alt="Bracelets"></a>
+      <h3>Bracelets</h3>
+    </div>
+    <div class="category-card">
+      <a href="mangalsutrasec2.jpg">
+      <img src="mangalsutrasec2.jpg" alt="Mangalsutra"></a>
+      <h3>Mangalsutra</h3>
+    </div>
+    <div class="category-card">
+      <a href="banglessec2.jpg">
+      <img src="banglessec2.jpg" alt="Bangle"></a>
+      <h3>Bangle</h3>
+  </div>
+</div>
+
+<div class="community-wrapper">
+  <div class="community-header">
+    <h2>Photos From Our Community</h2>
+    <p>Upload your photo or tag us @sillvexjewellery to be featured in our gallery!</p>
+  </div>
+  <div class="photo-flex">
+    <!-- Add community photo images here -->
+     <a href="ringcus.jpg">
+    <img src="ringcus.jpg" alt="Customer Ring"></a>
+    <a href="happycouple.jpg">
+    <img src="happycouple.jpg"Happy Couple"></a>
+    <a href="handswithjewellery.jpg">
+    <img src="handswithjewellery.jpg" alt="Hands with Jewellery"></a>
+    <a href="proposal.jpg">
+    <img src="proposal.jpg" alt="Proposal"></a>
+    <a href="jewellerypose.jpg">
+    <img src="jewellerypose.jpg" alt="Jewellery Pose"></a>
+    <a href="smilinggirl.jpg">
+    <img src="smilinggirl.jpg" alt="Smiling Girl"></a>
+
+
+
+    <a href="commu7.jpg">
+    <img src="commu7.jpg" alt="Customer Ring"></a>
+    <a href="commu8.jpg">
+    <img src="commu8.jpg"></a>
+    <a href="commu9.jpg">
+    <img src="commu9.jpg" alt="Hands with Jewellery"></a>
+    <a href="commu10.jpg">
+    <img src="commu10.jpg" alt="Proposal"></a>
+    <a href="commu11.jpg">
+    <img src="commu11.jpg" alt="Jewellery Pose"></a>
+    <a href="commu12.jpg">
+    <img src="commu12.jpg" alt="Smiling Girl"></a>
+
+
+
+
+    <a href="commu13.jpg">
+    <img src="commu13.jpg" alt="Customer Ring"></a>
+    <a href="commu14.jpg">
+    <img src="commu14.jpg"Happy Couple"></a>
+    <a href="commu15.jpg">
+    <img src="commu15.jpg" alt="Hands with Jewellery"></a>
+    <a href="commu16.jpg">
+    <img src="commu16.jpg" alt="Proposal"></a>
+    <a href="commu17.jpg">
+    <img src="commu17.jpg" alt="Jewellery Pose"></a>
+    <a href="commu18.jpg">
+    <img src="commu18.jpg" alt="Smiling Girl"></a>
+  </div>
+  <div class="upload-button">
+    <a href="#" class="btn-upload">📷 Add Your Photos</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Sillvex</h3>
+      <p>Pure. Precious. Personal.</p>
+    </div>
+    <div class="footer-column">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#">Rings</a></li>
+        <li><a href="#">Earrings</a></li>
+        <li><a href="#">Necklaces</a></li>
+        <li><a href="#">Bracelets</a></li>
+        <li><a href="#">Anklets</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Information</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Stay Connected</h4>
+      <form>
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/sillvex"><img src="fb.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/sillvex925/"><img src="insta.png" alt="Instagram"></a>
+        <a href="https://wa.me/+918960746723"><img src="whatsapp.png" alt="WhatsApp"></a>
+        <a href="https://www.amazon.in/stores/Sillvex/page/327C2129-FE71-4857-9DE1-7E500E30EE6C?is_byline_deeplink=true"><img src="amazon1.png" alt="Amazon"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Sillvex. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
